@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Post</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+      width: 400px;
+    }
+
+    form b {
+      color: #e63946;
+      display: block;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #262626;
+      border: 1px solid #8B0000;
+      border-radius: 6px;
+      color: #f5f5f5;
+      font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+      accent-color: #8B0000;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8B0000;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e63946;
+    }
+
+    ::file-selector-button {
+      background-color: #8B0000;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    ::file-selector-button:hover {
+      background-color: #e63946;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="form" action="ficha.php" method="POST" enctype="multipart/form-data">
+    <b>Nombre:</b>
+    <input type="text" name="nombre">
+
+    <b>Edad:</b>
+    <input type="number" name="edad">
+
+    <b>E-mail:</b>
+    <input type="email" name="email">
+
+    <b>Clase:</b>
+    <select name="clase">
+      <option value="bárbaro">Bárbaro</option>
+      <option value="luchador">Luchador</option>
+      <option value="explorador">Explorador</option>
+      <option value="pícaro">Pícaro</option>
+      <option value="monje">Monje</option>
+      <option value="druida">Druida</option>
+      <option value="brujo">Brujo</option>
+      <option value="paladín">Paladín</option>
+      <option value="clérigo">Clérigo</option>
+      <option value="mago">Mago</option>
+      <option value="bardo">Bardo</option>
+      <option value="hechicero">Hechicero</option>
+    </select>
+
+    <b>Bonus:</b>
+    <label><input type="radio" name="bonus" value="FUE">Fuerza</label>
+    <label><input type="radio" name="bonus" value="DES">Destreza</label>
+    <label><input type="radio" name="bonus" value="CON">Constitución</label>
+    <label><input type="radio" name="bonus" value="INT">Inteligencia</label>
+    <label><input type="radio" name="bonus" value="SAB">Sabiduría</label>
+    <label><input type="radio" name="bonus" value="CAR">Carisma</label>
+
+    <b>Multiclases:</b>
+    <label><input type="checkbox" name="multiclases[]" value="bárbaro">Bárbaro</label>
+    <label><input type="checkbox" name="multiclases[]" value="luchador">Luchador</label>
+    <label><input type="checkbox" name="multiclases[]" value="explorador">Explorador</label>
+    <label><input type="checkbox" name="multiclases[]" value="pícaro">Pícaro</label>
+    <label><input type="checkbox" name="multiclases[]" value="monje">Monje</label>
+    <label><input type="checkbox" name="multiclases[]" value="brujo">Brujo</label>
+    <label><input type="checkbox" name="multiclases[]" value="paladín">Paladín</label>
+    <label><input type="checkbox" name="multiclases[]" value="clérigo">Clérigo</label>
+    <label><input type="checkbox" name="multiclases[]" value="mago">Mago</label>
+    <label><input type="checkbox" name="multiclases[]" value="bardo">Bardo</label>
+    <label><input type="checkbox" name="multiclases[]" value="hechicero">Hechicero</label>
+
+    <b>Avatar:</b>
+    <input type="file" name="foto" id="foto" accept="image/*">
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>

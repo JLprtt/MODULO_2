@@ -37,4 +37,8 @@ function saludar($nombre, $hora) {
 
 echo saludar($usuario, $hora);
 
-echo "date('d/m/Y') date('H:i:s')";
+$fechaActual = date('d/m/Y');
+$horaActual = date('H:i:s');
+$horaActual12 = date('h:i:s a');
+
+echo "$fechaActual $horaActual | $horaActual12";
