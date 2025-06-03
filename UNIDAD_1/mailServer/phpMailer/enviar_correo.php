@@ -13,7 +13,7 @@ try {
     // Configuración del servidor SMTP
     $mail->isSMTP();
     $mail->Host = HOST; // Cambia esto según tu proveedor de correo
-    $mail->SMTPAuth = true;
+    $mail->SMTPAuth = false;
     $mail->Username = EMAIL; // Tu dirección de correo
     $mail->Password = PASSWORD; // Tu contraseña o clave de aplicación
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
